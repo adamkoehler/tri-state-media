@@ -1188,6 +1188,19 @@ Modules
 	max-width:120px;
 	height: auto;
 	}
+
+/*Contact page*/
+.contactus h2{margin-bottom:5px;}
+.contactus a{color: black;}
+.contactus a:hover{color: #bf1e2e;}
+.contactus .address{
+	font-size: 22px;
+	line-height: 32px;
+	color: #000;
+	font-weight: 700;
+	}
+
+
 @media (max-width:991px) {
 	.contact{
 		padding-top: 40px;
@@ -1200,6 +1213,10 @@ Modules
 		bottom: -15px;
 		}
 	.contact .star6 img{max-width:80px;}
+	.contactus .address{
+		font-size: 20px;
+		line-height: 28px;
+	}
 }
 @media (max-width:767px) {
 	.contact{
@@ -1216,6 +1233,12 @@ Modules
 		bottom: -15px;
 		}
 	.contact .star6 img{max-width:55px;}
+	.contactus{margin-bottom: 35px;}
+	.contactus .address{
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.contactus:last-child{margin-bottom: 0;}
 }
 
 /*=======================================================
@@ -1223,7 +1246,7 @@ Modules
 ========================================================*/
 .internal_sections{
 	padding-bottom: 60px;
-	padding-top: 60px;
+	padding-top: 70px;
 	position: relative;
 	}
 .internal_sections h2{
@@ -1256,6 +1279,14 @@ Modules
 	margin-left: 25px;
 	margin-bottom: 10px;
 	}
+.veteran_link p{font-family: "georgia-italic";}
+.photolg{
+	margin-top: 60px;
+	text-align: center;
+	}
+.veteran_link a{color: #000;}
+.veteran_link a:hover{color: #bf1e2e;}
+
 @media (max-width:1199px) {
 	.internal_sidebar{padding-left: 0px;}
 }
@@ -1265,6 +1296,8 @@ Modules
 		padding-top: 50px;
 	}
 	.internal_sidebar {margin-top: 40px;}  
+	.photolg{text-align: right;}
+	.veteran_link{margin-top: 30px;}
 }
 @media (max-width:767px) {
 	.internal_sections{
@@ -1276,6 +1309,7 @@ Modules
 		line-height: 32px;
 		margin-bottom: 15px;
 		}
+	.contactus h2{margin-bottom:5px;}
 	.internal_sections p{
 		font-size: 15px;
 		line-height: 23px;
@@ -1286,6 +1320,10 @@ Modules
 		margin-left: 0px;
 		margin-bottom: 20px;
 		}
+	.photolg{
+		text-align: left;
+		margin-top: 30px;
+	}
 }
 
 /*=======================================================

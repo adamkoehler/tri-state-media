@@ -130,6 +130,7 @@ ul.slimmenu li a {
     -moz-transition: color 0.5s ease-out;
     -webkit-transition: color 0.5s ease-out
 	}
+ul.slimmenu li.current > a {color: #bf1e2e;}
 ul.slimmenu li:nth-last-child(2) a{padding-right: 0;}
 ul.slimmenu li.requestaquote {display: none;}
 ul.slimmenu li a:hover {

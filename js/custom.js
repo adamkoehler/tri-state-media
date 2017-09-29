@@ -198,6 +198,105 @@
 			return false;
 		});
 
-	}); 
+	});
+	
+	/* ==============================================
+        Project Tab
+    =============================================== */
+    $(".product_name").click(function() {
+        var activeTab = $(this).attr("href"); //Find the target via the href
+        if ($(activeTab).is(':visible') ){
+            //$(activeTab).slideUp();
+            // $(this).removeClass("active");
+        } else {			
+            $(".product_name").removeClass("active"); //Remove any "active" class					
+            $(this).addClass("active")
+            $('.product_table').hide();
+            $(activeTab).fadeIn();		
+        }
+        return false;
+    });
+	
+/*    jQuery(document).ready(function(){
+        $(".nav-tabs li a").click(function() {
+		  var activeTab = $(this).attr("href");
+		  //alert("Hello! I am an alert box!!");
+		$(".project_wrap" ).find( ".project_detail:first-child" ).css( "display", "block" );
+		});
+	});*/
 
 })(jQuery);
+
+
+/*Equal Height*/
+	equalheight = function(container){
+		var currentTallest = 0,
+			 currentRowStart = 0,
+			 rowDivs = new Array(),
+			 $el,
+			 topPosition = 0;
+		 jQuery(container).each(function() {
+		   $el = jQuery(this);
+		   jQuery($el).height('auto')
+		   topPostion = $el.position().top;
+
+		   if (currentRowStart != topPostion) {
+			 for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			   rowDivs[currentDiv].height(currentTallest);
+			 }
+
+			 rowDivs.length = 0; // empty the array
+			 currentRowStart = topPostion;
+			 currentTallest = $el.height();
+			 rowDivs.push($el);
+		   } else {
+			 rowDivs.push($el);
+			 currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+		  }
+		   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			 rowDivs[currentDiv].height(currentTallest);
+		   }
+		 });
+		}
+	if(jQuery(window).width() >= 992){
+		equalheight('.eqheight');
+		equalheight('.industries_listing .industrie .details h3');
+		equalheight('ul.tabs li');
+	}
+
+ 	// tabbed content
+    // http://www.entheosweb.com/tutorials/css/tabs.asp
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+	/* if in tab mode */
+    $("ul.tabs li").click(function() {
+      $(".tab_content").hide();
+      var activeTab = $(this).attr("rel"); 
+      $("#"+activeTab).fadeIn();		
+		
+      $("ul.tabs li").removeClass("active");
+      $(this).addClass("active");
+
+	  $(".tab_drawer_heading").removeClass("d_active");
+	  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+	  
+    });
+
+	/* if in drawer mode */
+	$(".tab_drawer_heading").click(function() { 
+      $(".tab_content").hide();
+      var d_activeTab = $(this).attr("rel"); 
+      $("#"+d_activeTab).fadeIn();
+	  
+	  $(".tab_drawer_heading").removeClass("d_active");
+      $(this).addClass("d_active");
+	  
+	  $("ul.tabs li").removeClass("active");
+	  $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+    });
+	
+	/* Extra class "tab_last" 
+	   to add border to right side
+	   of last tab */
+	$('ul.tabs li').last().addClass("tab_last");

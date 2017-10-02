@@ -1198,6 +1198,19 @@ Modules
 	color: #000;
 	font-weight: 700;
 	}
+.contactus .socialicons{
+	margin:15px 0;
+	padding: 0;
+	}
+.contactus .socialicons li{
+	display: inline-block;
+	list-style: none;
+	margin-right: 10px;
+	}
+.contactus .socialicons li a i{
+	font-size: 28px;
+	}
+.contactus .socialicons li:last-child{margin-right: 0;}
 
 
 @media (max-width:991px) {

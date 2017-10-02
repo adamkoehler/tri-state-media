@@ -217,13 +217,13 @@
         return false;
     });
 	
-/*    jQuery(document).ready(function(){
-        $(".nav-tabs li a").click(function() {
+     jQuery(document).ready(function(){
+        $(".tabs li").click(function() {
 		  var activeTab = $(this).attr("href");
 		  //alert("Hello! I am an alert box!!");
-		$(".project_wrap" ).find( ".project_detail:first-child" ).css( "display", "block" );
+		$(".tab_container" ).find( ".product_table.current" ).css( "display", "block" );
 		});
-	});*/
+	});
 
 })(jQuery);
 

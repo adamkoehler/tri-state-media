@@ -1692,8 +1692,8 @@ Preloader
 .product_table {
     display: none;
     clear: both; 
-    padding: 0px;
     margin-bottom: 50px;
+	padding-top: 20px;
     }
 .product_table.current{display: block;}
 .product_table.dnone{display: none;}
